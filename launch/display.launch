@@ -1,0 +1,16 @@
+<launch>
+  <!-- Xử lý file URDF/Xacro -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find tn13)/urdf/tn13.urdf" />
+
+  <!-- Node xuất thông tin trạng thái khớp -->
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+  <!-- Node xuất trạng thái robot -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+
+
+  <!-- RViz hiển thị robot và cảm biến -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find tn13)/rviz/configrviz.rviz" output="screen"/>
+</launch>
+

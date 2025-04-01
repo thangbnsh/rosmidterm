@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tn13">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0156580371525397 0.00076274544823618 0.0230564220306667"
+        rpy="0 0 0" />
+      <mass
+        value="0.186980888212018" />
+      <inertia
+        ixx="0.000120392896514682"
+        ixy="-2.16686088605617E-08"
+        ixz="3.78496221692522E-08"
+        iyy="0.000459130234544424"
+        iyz="-1.3279962939993E-08"
+        izz="0.000571283279528089" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_left_link">
+    <inertial>
+      <origin
+        xyz="-5.2906758020721E-06 0.000207292329300446 0.00946324766819859"
+        rpy="0 0 0" />
+      <mass
+        value="0.0184660869771915" />
+      <inertia
+        ixx="5.20536426827503E-06"
+        ixy="-2.41345107864992E-10"
+        ixz="1.2963737478275E-10"
+        iyy="5.09539946964971E-06"
+        iyz="-5.02729226335435E-08"
+        izz="8.17437250117628E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/wheel_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/wheel_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.040580469886906 0.0653327715750934 0.01093"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_left_link" />
+    <axis
+      xyz="0.00382648066007597 0 0.99999267899608" />
+    <dynamics
+      damping="0.01"
+      friction="0.01" />
+  </joint>
+  <link
+    name="wheel_right_link">
+    <inertial>
+      <origin
+        xyz="2.67592658975691E-07 5.91954136996975E-06 -0.00972425576539476"
+        rpy="0 0 0" />
+      <mass
+        value="0.0188356493917418" />
+      <inertia
+        ixx="5.31218090839499E-06"
+        ixy="2.35959609226924E-11"
+        ixz="5.3724877534623E-12"
+        iyy="5.31270181894033E-06"
+        iyz="1.18847294358213E-10"
+        izz="8.36894060910629E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/wheel_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/wheel_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0400804698869101 -0.0653346442335707 0.01093"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_right_link" />
+    <axis
+      xyz="0.00382648066007597 0 0.99999267899608" />
+    <dynamics
+      damping="0.01"
+      friction="0.01" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="0.00676653011666362 -0.000207827566854599 -0.0224318722671598"
+        rpy="0 0 0" />
+      <mass
+        value="1.33076913637071" />
+      <inertia
+        ixx="0.000614917940454091"
+        ixy="-8.01984318976279E-07"
+        ixz="0.00015824302591117"
+        iyy="0.000960697335617224"
+        iyz="-3.09162986587525E-06"
+        izz="0.00109815200027136" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.00166720638818119 -0.000284750904605523 0.06363"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-0.0147044597232891 5.41606455101151E-08 -0.005869470677028"
+        rpy="0 0 0" />
+      <mass
+        value="0.054335270667199" />
+      <inertia
+        ixx="2.2633421635547E-05"
+        ixy="-5.40721678479663E-12"
+        ixz="1.45380028902577E-07"
+        iyy="7.00114916721175E-06"
+        iyz="1.02807140331832E-11"
+        izz="2.03635502398026E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.115084054266437 0.00349351556494998 0.0765883580685939"
+      rpy="2.28282302406047E-05 0.00419538228067226 -0.000255025201659847" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 6.93889390390723E-18 -0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="0.00552876110196154" />
+      <inertia
+        ixx="8.01201327713732E-07"
+        ixy="-1.29986205481237E-22"
+        ixz="-3.53870194733746E-39"
+        iyy="1.14517257565508E-06"
+        iyz="5.25238777845289E-24"
+        izz="1.93808076171587E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0735304698869101 0.000450712706397433 0.00893000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="trutaymay_link">
+    <inertial>
+      <origin
+        xyz="-0.000561626440149815 4.85853147557044E-05 0.0480342292105829"
+        rpy="0 0 0" />
+      <mass
+        value="0.133680310101314" />
+      <inertia
+        ixx="0.000142407646860895"
+        ixy="-2.238937030027E-08"
+        ixz="1.88854868092082E-07"
+        iyy="0.00019612798037322"
+        iyz="-3.17693751547738E-08"
+        izz="6.35632268401286E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/trutaymay_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/trutaymay_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="trutaymay_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.0077106770451147 -5.50440355985213E-05 0.09893"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="trutaymay_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="khau1_link">
+    <inertial>
+      <origin
+        xyz="-0.0179903447502425 0.0467189673033084 0.00250000000000004"
+        rpy="0 0 0" />
+      <mass
+        value="0.0132171399353069" />
+      <inertia
+        ixx="1.15876049121091E-05"
+        ixy="4.17427930050841E-06"
+        ixz="5.24844575541965E-24"
+        iyy="2.35486991829859E-06"
+        iyz="-1.02196109148095E-22"
+        izz="1.38874034140106E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/khau1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/khau1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="khau1_link_joint"
+    type="revolute">
+    <origin
+      xyz="-0.00059275 0.0025541 0.09"
+      rpy="1.5708 0 0" />
+    <parent
+      link="trutaymay_link" />
+    <child
+      link="khau1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="0.01"
+      friction="0.01" />
+  </joint>
+  <link
+    name="khau2_link">
+    <inertial>
+      <origin
+        xyz="0.0352022113259505 0.0354188914555961 -0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0132171399353069" />
+      <inertia
+        ixx="7.00942875010884E-06"
+        ixy="-6.22366435205776E-06"
+        ixz="-3.83201680629472E-23"
+        iyy="6.93304608029887E-06"
+        iyz="-4.46997230278365E-23"
+        izz="1.38874034140106E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/khau2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/khau2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="khau2_link_joint"
+    type="revolute">
+    <origin
+      xyz="-0.035935 0.09332 0"
+      rpy="0 0 0" />
+    <parent
+      link="khau1_link" />
+    <child
+      link="khau2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="0.01"
+      friction="0.01" />
+  </joint>
+  <link
+    name="caster_link">
+    <inertial>
+      <origin
+        xyz="0 -6.93889390390723E-18 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0335103216382911" />
+      <inertia
+        ixx="5.36165146212658E-06"
+        ixy="0"
+        ixz="0"
+        iyy="5.36165146212658E-06"
+        iyz="0"
+        izz="5.36165146212658E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/caster_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tn13/meshes/caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.069677 -0.00034037 -0.0064332"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="0.01"
+      friction="0.01" />
+  </joint>
+  
+  
+  
+  
+  
+  
+  
+   
+<gazebo reference="imu_link">
+  <sensor name="imu_sensor" type="imu">
+    <always_on>true</always_on>
+    <update_rate>100</update_rate>
+    <visualize>true</visualize> 
+    <scale>0.1 0.1 0.1</scale>
+    <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+      <topicName>/imu</topicName>
+      <bodyName>imu_link</bodyName>
+      <frameName>imu_link</frameName>
+      <gaussianNoise>0.01</gaussianNoise>
+      <xyzOffset>0 0 0</xyzOffset>
+      <rpyOffset>0 0 0</rpyOffset> 
+      <initialOrientationAsReference>false</initialOrientationAsReference>
+    </plugin>
+    <pose>0 0 0 0 1.5708 0</pose> 
+  </sensor>
+  </gazebo>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+ <gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <updateRate>100</updateRate>
+    <leftJoint>wheel_left_link_joint</leftJoint>
+    <rightJoint>wheel_right_link_joint</rightJoint>
+    
+    <wheelSeparation>0.5380</wheelSeparation>
+    <wheelDiameter>0.2410</wheelDiameter>
+    <wheelAcceleration>0.5</wheelAcceleration>
+    <wheelTorque>20</wheelTorque>
+    <commandTopic>cmd_vel</commandTopic>
+    <odometryTopic>odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <odometrySource>1</odometrySource>
+    <publishWheelTF>true</publishWheelTF>
+    <publishOdom>true</publishOdom>
+        <publishWheelJointState>true</publishWheelJointState>
+        
+    <legacyMode>false</legacyMode>
+  </plugin>
+</gazebo>
+
+
+
+
+
+
+
+
+<gazebo reference="lidar_link">
+  <sensor type="ray" name="lidar_sensor">
+    <pose>0 0 0 0 0 0</pose>
+    <visualize>true</visualize>
+    <update_rate>30</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>720</samples>
+          <resolution>1</resolution>
+          <min_angle>-3.1416</min_angle>  
+          <max_angle>3.1416</max_angle>   
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.1</min>
+        <max>30.0</max>
+        <resolution>0.01</resolution>
+      </range>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>
+    </ray>
+    <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
+      <topicName>/scan</topicName>
+      <frameName>lidar_link</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+<gazebo reference="camera_link">
+  <sensor type="camera" name="camera1">
+    <update_rate>30.0</update_rate>
+    <camera name="head">
+      <horizontal_fov>1.3962634</horizontal_fov>
+      <image>
+        <width>800</width>
+        <height>800</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.02</near>
+        <far>300</far>
+      </clip>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.007</stddev>
+      </noise>
+    </camera>
+    <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>0.0</updateRate>
+      <cameraName>rrbot/camera1</cameraName>
+      <imageTopicName>image_raw</imageTopicName>
+      <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+      <frameName>camera_link</frameName>  
+      <hackBaseline>0.07</hackBaseline>
+      <distortionK1>0.0</distortionK1>
+      <distortionK2>0.0</distortionK2>
+      <distortionK3>0.0</distortionK3>
+      <distortionT1>0.0</distortionT1>
+      <distortionT2>0.0</distortionT2>
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+	<gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+</gazebo>
+
+
+
+
+<transmission name="khau1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="khau1_link_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="khau1_actuator">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="khau2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="khau2_link_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="khau2_actuator">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+</transmission>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</robot>

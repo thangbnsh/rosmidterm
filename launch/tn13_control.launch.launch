@@ -1,0 +1,14 @@
+<launch>
+    <!-- Load Controllers -->
+    <rosparam file="$(find tn13)/config/tn13_controllers.yaml" command="load"/>
+
+    <!-- Chạy controller_manager -->
+    <node name="controller_manager" pkg="controller_manager" type="controller_manager"
+          respawn="false" output="screen"/>
+
+    <!-- Đợi controller_manager khởi động trước khi spawn controller -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner"
+          args="joint_state_controller khau1_controller khau2_controller"
+          respawn="false" output="screen"/>
+</launch>
+
