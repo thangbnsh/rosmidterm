@@ -41,7 +41,7 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 Điều khiển tay máy di chuyển bằng bàn phím
 ```bash
-rosrun tn13 tn13_control.launch.launch
+roslaunch tn13 tn13_control.launch.launch
 ```
 ```bash
 rosrun tn13 control_arm.py
