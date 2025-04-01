@@ -1,0 +1,17 @@
+<launch>
+  <!-- Load Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+  <!-- Spawn Robot Model -->
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model"
+        args="-file $(find tn13)/urdf/tn13.urdf -urdf -model tn13"
+        output="screen" />
+
+  <!-- Fake Joint Calibration -->
+  <node name="fake_joint_calibration" pkg="rostopic" type="rostopic"
+        args="pub /calibrated std_msgs/Bool true" />
+
+  <!-- Load robot URDF -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find tn13)/urdf/tn13.urdf" />
+</launch>
+

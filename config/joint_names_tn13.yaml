@@ -1,0 +1,19 @@
+controller_joint_names: ['', 'wheel_left_link_joint', 'wheel_right_link_joint', 'khau1_link_joint', 'khau2_link_joint']
+
+
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+khau1_controller:
+  type: effort_controllers/JointPositionController
+  joint: khau1_link_joint
+ pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+khau2_controller:
+  type: effort_controllers/JointPositionController
+  joint: khau2_link_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
